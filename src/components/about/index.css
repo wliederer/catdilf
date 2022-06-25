@@ -1,0 +1,57 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.links {
+  justify-content: center;
+
+  display: flex;
+  color: #c58c66;
+  text-decoration: none;
+  align-items: center;
+  flex-direction: row;
+  padding-top: 4;
+}
+.links div {
+  font-size: 12;
+  margin-left: 4;
+}
+.contact {
+  color: #615e66;
+  margin-top: 10;
+  margin-bottom: 10;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  font-size: 14;
+  color: #615e66;
+  width: 300;
+  margin-left: auto;
+  margin-right: auto;
+}
+.form input {
+  color: #615e66;
+  height: 20;
+  border-radius: 5;
+  border-width: 1;
+  border-color: #c58c66;
+  border-style: solid;
+}
+.form textarea {
+  height: 100;
+  border-radius: 5;
+  border-width: 1;
+  background-color: #f5f5f5;
+  border-color: #c58c66;
+}
+.button {
+  height: 20;
+  width: 100;
+  margin-top: 10;
+  background-color: #dbb5b6;
+}
+.button :hover :focus :active {
+  background-color: #e8e8e8;
+}
