@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { BsGithub, BsInstagram } from "react-icons/bs";
 import { FaLinkedin } from "react-icons/fa";
@@ -10,21 +10,23 @@ const PUBLIC_KEY = process.env.REACT_APP_PUBLIC_KEY;
 
 const About = () => {
   const form = useRef();
+  const [response, setResponse] = useState("");
 
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY).then(
       (result) => {
-        console.log(result.text);
+        setResponse(result.text);
+        form.current.reset();
       },
       (error) => {
-        console.log(error.text);
+        setResponse(error.text);
       }
     );
   };
   return (
-    <div className="root">
+    <div className="about">
       <div>
         <a href="https://github.com/wliederer" className="links">
           <BsGithub />
@@ -50,8 +52,7 @@ const About = () => {
         </a>
       </div>
       <div className="contact">
-        <div>Contact:</div>
-        <div>liedererbill@gmail.com</div>
+        <div>Contact: liedererbill@gmail.com</div>
       </div>
       <form ref={form} onSubmit={sendEmail} className="form">
         <label>Name</label>
@@ -74,6 +75,7 @@ const About = () => {
         <textarea name="message" id="message" required={true} />
         <input className="button" type="submit" value="Send" />
       </form>
+      <div className="response">{response ? `response ${response}` : null}</div>
     </div>
   );
 };

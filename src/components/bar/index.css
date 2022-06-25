@@ -1,0 +1,27 @@
+.bar {
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #d3d3d3;
+  border-top: 1px solid #c58c66;
+  height: 50px;
+  width: 100%;
+  top: 70px;
+  z-index: 1;
+  box-shadow: 5px 5px 5px 5px #888888;
+  overflow: hidden;
+  padding-left: 30px;
+}
+@media screen and (min-width: 720px) {
+  .bar {
+    box-shadow: none;
+  }
+}
+.root > div {
+  width: 100%;
+}
+.block {
+  margin-bottom: 40px;
+}

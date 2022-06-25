@@ -1,0 +1,39 @@
+.linksComp {
+  position: relative;
+  padding-left: 0px;
+  list-style-type: none;
+}
+
+.navItem > button {
+  background: none;
+  text-transform: none;
+  min-height: 16px;
+  line-height: inherit;
+  letter-spacing: inherit;
+  border-radius: 0px;
+  text-align: left;
+}
+
+.linkItem {
+  margin-right: 8px;
+  font-size: 12px;
+  color: #615e66;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+.linkItem :hover :focus :active {
+  background-color: #e8e8e8;
+}
+.linkItem > div {
+  display: inline-block;
+  margin-right: 8px;
+}
+.active {
+  font-weight: bold;
+  background-color: #e8e8e8;
+}
+.icon {
+  color: #c58c66;
+}
