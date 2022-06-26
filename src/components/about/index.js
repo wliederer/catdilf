@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import { BsGithub, BsInstagram } from "react-icons/bs";
-import { FaLinkedin } from "react-icons/fa";
+// import { BsGithub, BsInstagram } from "react-icons/bs";
+// import { FaLinkedin } from "react-icons/fa";
 import "./index.css";
 
 const SERVICE_ID = process.env.REACT_APP_SERVICE_ID;
@@ -29,7 +29,7 @@ const About = () => {
     <div className="about">
       <div>
         <a href="https://github.com/wliederer" className="links">
-          <BsGithub />
+          {/* <BsGithub /> */}
           <div>Checkout my github to see what I've been up to!</div>
         </a>
       </div>
@@ -38,7 +38,7 @@ const About = () => {
           href="https://www.instagram.com/simplybilliam/?hl=en"
           className="links"
         >
-          <BsInstagram />
+          {/* <BsInstagram /> */}
           <div>Follow me on instagram 🤷 </div>
         </a>
       </div>
@@ -47,7 +47,7 @@ const About = () => {
           href="https://www.linkedin.com/in/william-liederer-a76a5568/"
           className="links"
         >
-          <FaLinkedin />
+          {/* <FaLinkedin /> */}
           <div>LinkedIn</div>
         </a>
       </div>

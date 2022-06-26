@@ -1,5 +1,5 @@
 import React from "react";
-import { FaHamburger } from "react-icons/fa";
+// import { FaHamburger } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "./index.css";
 
@@ -20,7 +20,7 @@ const Header = ({ ...props }) => {
             disabled={props.showBar}
             onClick={() => handleMobileClick(props.showBar, props.setShowBar)}
           >
-            <FaHamburger />
+            {/* <FaHamburger /> */}
           </button>
         </div>
         <Link to="/" className="headerLink">
