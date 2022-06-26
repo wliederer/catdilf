@@ -20,6 +20,10 @@ const Header = ({ ...props }) => {
             disabled={props.showBar}
             onClick={() => handleMobileClick(props.showBar, props.setShowBar)}
           >
+            <div className="hamburgerIcon"></div>
+            <div className="hamburgerIcon"></div>
+            <div className="hamburgerIcon"></div>
+
             {/* <FaHamburger /> */}
           </button>
         </div>

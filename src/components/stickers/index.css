@@ -1,0 +1,34 @@
+.stickers {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 30px;
+}
+
+.img {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  margin: 10px;
+  padding: 10px 10px 10px 10px;
+  border-radius: 10px;
+}
+
+.stickerTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10px;
+  color: #615e66;
+  font-size: 12px;
+  padding-bottom: 8px;
+}
+
+.tile {
+  border-radius: 10px;
+}
+.tile :hover {
+  box-shadow: 5px 5px 5px 5px #d3d3d3;
+}

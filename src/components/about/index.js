@@ -1,16 +1,36 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 // import { BsGithub, BsInstagram } from "react-icons/bs";
 // import { FaLinkedin } from "react-icons/fa";
 import "./index.css";
+import Stickers from "../stickers";
+import Art from "../art";
+import axios from "axios";
 
 const SERVICE_ID = process.env.REACT_APP_SERVICE_ID;
 const TEMPLATE_ID = process.env.REACT_APP_TEMPLATE_ID;
 const PUBLIC_KEY = process.env.REACT_APP_PUBLIC_KEY;
+const API_URL = process.env.REACT_APP_API_URL;
+const TOKEN = process.env.REACT_APP_TOKEN;
 
 const About = () => {
   const form = useRef();
   const [response, setResponse] = useState("");
+  const [art, setArt] = useState(null);
+
+  useEffect(() => {
+    const getArt = async () =>
+      await axios
+        .get(`${API_URL}/art`, { params: { token: TOKEN } })
+        .then((data) => {
+          setArt(data.data);
+        })
+        .catch((err) => {
+          console.error(err);
+        });
+
+    getArt();
+  }, []);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -76,6 +96,8 @@ const About = () => {
         <input className="button" type="submit" value="Send" />
       </form>
       <div className="response">{response ? `response ${response}` : null}</div>
+      <Stickers art={art} />
+      <Art art={art} />
     </div>
   );
 };

@@ -50,7 +50,18 @@
 }
 
 .hamburger {
-  color: #c58c66;
+  /* color: #c58c66;
+  height: 10px;
+  width: 10px; */
+  border: none;
+  background-color: transparent;
+}
+.hamburgerIcon {
+  justify-content: center;
+  width: 15px;
+  height: 2px;
+  background-color: black;
+  margin: 3px 0;
 }
 @media screen and (min-width: 720px) {
   .menuTrigger {

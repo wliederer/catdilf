@@ -1,17 +1,12 @@
 import React from "react";
 import "./index.css";
 
-const Stickers = ({ ...props }) => {
-  console.log(props);
+const Art = ({ ...props }) => {
   return (
-    <div className="stickers">
+    <div className="art">
       {props.art && props.art.stuff.length > 0
         ? props.art.stuff.map((x, i) => {
-            if (
-              x &&
-              x.split("/")[3] === "stickers" &&
-              props.art.names[i - 1].split("|")[0] != ""
-            ) {
+            if (x && x.split("/")[3] === "art") {
               return (
                 <>
                   <div key={i} className="tile">
@@ -30,4 +25,4 @@ const Stickers = ({ ...props }) => {
   );
 };
 
-export default Stickers;
+export default Art;
