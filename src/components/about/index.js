@@ -4,7 +4,7 @@ import emailjs from "@emailjs/browser";
 // import { FaLinkedin } from "react-icons/fa";
 import "./index.css";
 import Stickers from "../stickers";
-import Art from "../art";
+// import Art from "../art";
 import axios from "axios";
 
 const SERVICE_ID = process.env.REACT_APP_SERVICE_ID;
@@ -97,7 +97,7 @@ const About = () => {
       </form>
       <div className="response">{response ? `response ${response}` : null}</div>
       <Stickers art={art} />
-      <Art art={art} />
+      {/* <Art art={art} /> */}
     </div>
   );
 };
