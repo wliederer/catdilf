@@ -6,6 +6,7 @@ import "./index.css";
 import Stickers from "../stickers";
 // import Art from "../art";
 import axios from "axios";
+import StripeContainer from "../stripe/StripContainer";
 
 const SERVICE_ID = process.env.REACT_APP_SERVICE_ID;
 const TEMPLATE_ID = process.env.REACT_APP_TEMPLATE_ID;
@@ -98,6 +99,7 @@ const About = () => {
       <div className="response">{response ? `response ${response}` : null}</div>
       <Stickers art={art} />
       {/* <Art art={art} /> */}
+      <StripeContainer />
     </div>
   );
 };

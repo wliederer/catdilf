@@ -2,7 +2,6 @@ import React from "react";
 import "./index.css";
 
 const Stickers = ({ ...props }) => {
-  console.log(props);
   return (
     <div className="stickers">
       {props.art && props.art.stuff.length > 0
@@ -13,15 +12,15 @@ const Stickers = ({ ...props }) => {
               props.art.names[i - 1].split("|")[0] != ""
             ) {
               return (
-                <>
-                  <div key={i} className="tile">
+                <div key={i}>
+                  <div className="tile">
                     <img className="img" src={x} alt="nothing"></img>
                   </div>
                   <div className="stickerTitle">
                     {props.art.names[i - 1].split("|")[0]}
                     {props.art.names[i - 1].split("|")[1]}
                   </div>
-                </>
+                </div>
               );
             }
           })
