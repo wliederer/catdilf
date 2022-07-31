@@ -4,8 +4,7 @@ import { Elements } from "@stripe/react-stripe-js";
 
 import { CheckoutForm } from "./CheckoutForm";
 
-const PUBLIC_KEY =
-  "pk_test_51LQsoeJeMlmSQr0k9s4j3sykUsAv4hlSjW2B1191eUXjraZSBjLW6mydciYp0oTvEpnzIAMvOhmcLrEiuEFxh8wu00NsYLlouJ";
+const PUBLIC_KEY = process.env.REACT_APP_STRIPE_PUBLIC_KEY;
 
 const stripeTestPromise = loadStripe(PUBLIC_KEY).catch((err) =>
   console.error(err)
