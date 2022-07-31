@@ -5,7 +5,7 @@ import About from "./components/about";
 import Bar from "./components/bar";
 import Header from "./components/header";
 import useWindowDimensions from "./utility/useWindowDimensions";
-// import Stickers from "./components/stickers";
+import Stickers from "./components/stickers";
 
 function App() {
   const { width } = useWindowDimensions();
@@ -24,8 +24,8 @@ function App() {
         <Bar showBar={barStatus()} setShowBar={setBar} />
         <div className="page">
           <Routes>
-            <Route path="/" element={<About />}></Route>
-            {/* <Route path="/stickers" element={<Stickers />}></Route> */}
+            <Route path="/about" element={<About />}></Route>
+            <Route path="/" element={<Stickers />}></Route>
           </Routes>
         </div>
       </Router>

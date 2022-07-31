@@ -7,8 +7,8 @@ import Links from "./links";
 
 const links = {
   tools: [
-    // { value: "About Me", path: "/", icon: "" },
-    // { value: "Stickers", path: "/stickers", icon: "" },
+    { value: "About Me", path: "/about", icon: "" },
+    { value: "Stickers", path: "/", icon: "" },
   ],
 };
 
